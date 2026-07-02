@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Define as configuraçoes em todos os elementos*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+/*criando variaveis*/
+:root{
+    --cor01: #ff1818;
+    --cor02: #2a26e6;
+    --cor03: #65a300;
+    --cor04: #e9da0b;
+}
+
+/*formatando a tag Master pelo id geral*/
+#geral{
+    margin: 20px;
+
+}
+
+/*formatando o cabeçalho*/
+#cabecalho{
+
+    display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0px 20px;
+height: 150px;
+}
+
+/*configurando menu config*/
+#menu ul{
+    display: flex;
+    gap: 27px;
+    list-style: disc;
+}
+
+#menu ul img{
+    width: 25px;
+    height: 25px;
+}
+
