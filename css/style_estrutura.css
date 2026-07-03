@@ -30,8 +30,8 @@
     display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 0px 20px;
-height: 150px;
+padding: 20px;
+height: 100px;
 }
 
 /*configurando menu config*/
@@ -46,3 +46,35 @@ height: 150px;
     height: 25px;
 }
 
+/*FORMATANDO SECTION pesquisa*/
+#pesquisa{
+    height: 200px;
+    background-color: var(--cor02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#pesquisa input{
+    width: 600px;
+    height: 80;
+    background-color: aliceblue;
+    border-radius: 9px;
+    padding: 10px;
+    color: black;
+
+}
+
+#pesquisa input ::placeholder{
+    font-size: 1.3em;
+    font-style: italic;
+    color: #2a26e6;
+}
+
+/*formatando os cards*/
+#cards{
+    display: grid;
+    grid-template-columns: repeat((auto-fit), minmax(250px, 1fr));
+    gap: 20px;
+}
