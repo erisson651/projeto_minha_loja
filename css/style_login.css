@@ -1,4 +1,16 @@
 /*=============================
+        VARIÁVEIS DE COR
+==============================*/
+
+:root{
+    --cor01: #0056d6;   /* azul principal */
+    --cor02: #ffffff;   /* branco - fundo da caixa */
+    --cor03: #000000;   /* preto - detalhes/labels */
+    --cor04: #003a94;   /* azul mais escuro - hover */
+    --cor05: #f5f7fa;   /* branco acinzentado - fundo da seção */
+}
+
+/*=============================
         ÁREA DE LOGIN
 ==============================*/
 
@@ -64,7 +76,7 @@
 }
 
 #form-login input::placeholder{
-    color: #0c1cfa;
+    color: #999999;
     font-style: italic;
 }
 
@@ -79,7 +91,7 @@
     border: none;
     border-radius: 6px;
     background-color: var(--cor01);
-    color: rgb(0, 0, 0);
+    color: var(--cor02);
     font-size: 1em;
     font-weight: bold;
     text-transform: uppercase;
