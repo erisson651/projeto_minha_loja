@@ -1,16 +1,4 @@
 /*=============================
-        VARIÁVEIS DE COR
-==============================*/
-
-:root{
-    --cor01: #0056d6;   /* azul principal */
-    --cor02: #ffffff;   /* branco - fundo da caixa */
-    --cor03: #000000;   /* preto - detalhes/labels */
-    --cor04: #003a94;   /* azul mais escuro - hover */
-    --cor05: #f5f7fa;   /* branco acinzentado - fundo da seção */
-}
-
-/*=============================
         ÁREA DE LOGIN
 ==============================*/
 
