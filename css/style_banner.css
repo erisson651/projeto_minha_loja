@@ -1,0 +1,16 @@
+body{
+    margin:0;
+    padding:0;
+    background:#05070d;
+    overflow-x:hidden;
+}
+
+.banner{
+    width:100vw;
+    height:520px;
+    margin-left:calc(50% - 50vw);
+    background-image:url("../img/apex-tv-banner.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
