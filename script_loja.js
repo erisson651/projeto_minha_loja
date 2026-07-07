@@ -1,7 +1,6 @@
 // script_loja.js
 // Fica na página inicial (index.html).
 // Quando o cliente clica em "Adicionar", pega os dados do produto
-// (guardados nos data-attributes do card) e manda o cliente
 // direto para o carrinho, já com esse produto na URL.
 
 document.addEventListener("DOMContentLoaded", function () {
