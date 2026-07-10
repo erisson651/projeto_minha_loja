@@ -63,9 +63,9 @@ const menuSecoes = () => {
 
 };
 
-
+// ================================
 // CARREGAR MENU
-
+// ================================
 
 const carregaSecoes = () => {
 
@@ -73,9 +73,7 @@ const carregaSecoes = () => {
 
     ul.innerHTML = "";
 
-    //LINK TODOS
-  
-
+    // Botão Todos
     const liTodos = document.createElement("li");
 
     const aTodos = document.createElement("a");
@@ -87,7 +85,8 @@ const carregaSecoes = () => {
         listarProdutos(produtos);
     });
 
-
+    liTodos.appendChild(aTodos);
+    ul.appendChild(liTodos);
 
     // Categorias
     menuSecoes().forEach((secao) => {
@@ -116,8 +115,9 @@ const carregaSecoes = () => {
 
 };
 
-
+// ================================
 // FILTRO
+// ================================
 
 const filtroProduto = (idSecao) => {
 
@@ -125,9 +125,9 @@ const filtroProduto = (idSecao) => {
 
 };
 
-
+// ================================
 // INICIALIZAÇÃO
-
+// ================================
 
 listarProdutos();
 
