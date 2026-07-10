@@ -1,0 +1,190 @@
+/*=============================
+        ÁREA DO CARRINHO
+==============================*/
+
+#carrinho{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: var(--cor05);
+}
+
+.container-carrinho{
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--cor02);
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,.15);
+}
+
+.container-carrinho h1{
+    color: var(--cor01);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+/*=============================
+        TABELA
+==============================*/
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th{
+    text-align: left;
+    padding: 12px 10px;
+    border-bottom: 2px solid var(--cor01);
+    color: var(--cor01);
+    text-transform: uppercase;
+    font-size: .85em;
+    letter-spacing: 1px;
+}
+
+tbody td{
+    padding: 15px 10px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.produto-linha{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.produto-linha img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.input-qtd{
+    width: 60px;
+    height: 38px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    outline: none;
+    transition: .3s;
+}
+
+.input-qtd:focus{
+    border: 2px solid var(--cor01);
+}
+
+.btn-remover{
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--cor03);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-remover:hover{
+    background-color: #fdecec;
+    color: #c0392b;
+}
+
+.carrinho-vazio{
+    text-align: center;
+    padding: 30px 0;
+    color: #666;
+}
+
+.carrinho-vazio a{
+    color: var(--cor01);
+    font-weight: bold;
+}
+
+/*=============================
+        RESUMO
+==============================*/
+
+.resumo{
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.resumo p{
+    margin: 0;
+    color: var(--cor03);
+}
+
+.resumo h2{
+    color: var(--cor01);
+    margin: 10px 0 20px;
+}
+
+.resumo .finalizar{
+    width: 220px;
+    height: 48px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--cor01);
+    color: var(--cor02);
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.resumo .finalizar:hover{
+    background-color: var(--cor04);
+}
+
+/*=============================
+        RESPONSIVIDADE
+==============================*/
+
+@media(max-width:700px){
+
+    .container-carrinho{
+        padding: 20px;
+    }
+
+    thead{
+        display: none;
+    }
+
+    table, tbody, tr, td{
+        display: block;
+        width: 100%;
+    }
+
+    tbody tr{
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--cor01);
+        padding-bottom: 10px;
+    }
+
+    tbody td{
+        border-bottom: none;
+        padding: 8px 0;
+    }
+
+    .resumo{
+        align-items: stretch;
+    }
+
+    .resumo .finalizar{
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,140 @@
+@import url(style_formulario.css);
+/*=============================
+        PÁGINA SOBRE
+==============================*/
+
+#sobre{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: var(--cor02);
+}
+
+#conteudo-sobre{
+    width: 100%;
+    max-width: 1100px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,.15);
+}
+
+#conteudo-sobre h1{
+    font-size: 2.5em;
+    color: var(--cor01);
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#conteudo-sobre h2{
+    font-size: 1.6em;
+    color: var(--cor04);
+    margin: 30px 0 15px;
+}
+
+#conteudo-sobre p{
+    font-size: 1.1em;
+    color: var(--cor03);
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#conteudo-sobre img{
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+/*=============================
+        MISSÃO, VISÃO E VALORES
+==============================*/
+
+#cards-sobre{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card-sobre{
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-top: 6px solid var(--cor01);
+    border-radius: 10px;
+    padding: 25px;
+    transition: .3s;
+}
+
+.card-sobre:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 18px rgba(0,0,0,.2);
+}
+
+.card-sobre h3{
+    text-align: center;
+    color: var(--cor04);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.card-sobre p{
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/*=============================
+        BANNER
+==============================*/
+
+#banner-sobre{
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+                url("../imagens/banner-sobre.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner-sobre h1{
+    color: white;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/*=============================
+        RESPONSIVIDADE
+==============================*/
+
+@media(max-width:900px){
+
+    #cards-sobre{
+        grid-template-columns: 1fr;
+    }
+
+    #conteudo-sobre{
+        padding: 25px;
+    }
+
+    #conteudo-sobre h1{
+        font-size: 2em;
+    }
+
+    #banner-sobre{
+        height: 250px;
+    }
+
+    #banner-sobre h1{
+        font-size: 2em;
+    }
+
+}
