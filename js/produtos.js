@@ -125,6 +125,19 @@ const filtroProduto = (idSecao) => {
 
 };
 
+//FUNÇÃO CAPTURANDO DO INPUT PESQUISA 
+//PEGANDO INPUT DO DOM
+const inputPesquisa = Document.querySelector('#pesquisa')
+
+inputPesquisa.addEventListener('input', (evt)=>{
+    //PEGANDO VALOR DO INPUT E CONVERTENDO EM MINÚSCULO
+    let txtInput = evt.target.value
+//FILTRANDO CARDS A PARTIR DO FILTER E INCLUDES
+    MontaCards(produtos.filter(elem => elem.descricao_produto.toLowerCase() .includes(txtInput)))
+    
+
+})
+
 // ================================
 // INICIALIZAÇÃO
 // ================================
