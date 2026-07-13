@@ -31,11 +31,16 @@ const listarProdutos = (lista = produtos) => {
             .toFixed(2)
             .replace(".", ",")}`;
 
+
+
         // Botão
         const botao = document.createElement("button");
         botao.classList.add("btn-add");
-        botao.textContent = "Adicionar";
 
+        botao.textContent = "Adicionar";
+        botao.addEventListener('click', () => {
+            window.location.href = 'pagina/carrinho.html'
+        })
         divCard.appendChild(imgProduto);
         divCard.appendChild(pNome);
         divCard.appendChild(h2Preco);
@@ -46,6 +51,8 @@ const listarProdutos = (lista = produtos) => {
     });
 
 };
+
+
 
 // ================================
 // MENU DE CATEGORIAS
@@ -127,14 +134,14 @@ const filtroProduto = (idSecao) => {
 
 //FUNÇÃO CAPTURANDO DO INPUT PESQUISA 
 //PEGANDO INPUT DO DOM
-const inputPesquisa = Document.querySelector('#pesquisa')
+const inputPesquisa = document.querySelector('#pesquisa')
 
-inputPesquisa.addEventListener('input', (evt)=>{
+inputPesquisa.addEventListener('input', (evt) => {
     //PEGANDO VALOR DO INPUT E CONVERTENDO EM MINÚSCULO
-    let txtInput = evt.target.value
-//FILTRANDO CARDS A PARTIR DO FILTER E INCLUDES
-    MontaCards(produtos.filter(elem => elem.descricao_produto.toLowerCase() .includes(txtInput)))
-    
+    let txtInput = evt.target.value.toLowerCase()
+    //FILTRANDO CARDS A PARTIR DO FILTER E INCLUDES
+    MontaCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
+
 
 })
 
