@@ -15,6 +15,9 @@ const listarProdutos = (lista = produtos) => {
 
         divCard.dataset.id = elem.id_produto;
         divCard.dataset.secao = elem.id_secao;
+        divCard.dataset.nome = elem.descricao_produto;
+        divCard.dataset.preco = elem.valor_unitario;
+        divCard.dataset.imagem = elem.caminho_imagem;
 
         // Imagem
         const imgProduto = document.createElement("img");
@@ -38,9 +41,10 @@ const listarProdutos = (lista = produtos) => {
         botao.classList.add("btn-add");
 
         botao.textContent = "Adicionar";
-        botao.addEventListener('click', () => {
-            window.location.href = 'pagina/carrinho.html'
-        })
+        // O clique é tratado pelo script_loja.js, que lê os dados
+        // (dataset.nome / dataset.preco / dataset.imagem) do card
+        // e leva o usuário pro carrinho já com o produto na URL.
+
         divCard.appendChild(imgProduto);
         divCard.appendChild(pNome);
         divCard.appendChild(h2Preco);
@@ -134,14 +138,13 @@ const filtroProduto = (idSecao) => {
 
 //FUNÇÃO CAPTURANDO DO INPUT PESQUISA 
 //PEGANDO INPUT DO DOM
-const inputPesquisa = document.querySelector('#pesquisa')
+const inputPesquisa = document.querySelector('#input-pesquisa')
 
 inputPesquisa.addEventListener('input', (evt) => {
     //PEGANDO VALOR DO INPUT E CONVERTENDO EM MINÚSCULO
     let txtInput = evt.target.value.toLowerCase()
     //FILTRANDO CARDS A PARTIR DO FILTER E INCLUDES
-    MontaCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
-
+    listarProdutos(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
 
 })
 

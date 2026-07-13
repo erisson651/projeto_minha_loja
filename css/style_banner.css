@@ -7,10 +7,14 @@ body{
 
 .banner{
     width:100vw;
-    height:520px;
     margin-left:calc(50% - 50vw);
-    background-image:url("../img/apex-tv-banner.jpg");
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+}
+
+.banner img{
+    width:100%;
+    max-width:1600px;
+    height:auto;
+    display:block;
 }
