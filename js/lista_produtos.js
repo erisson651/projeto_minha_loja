@@ -89,4 +89,5 @@ const produtos = [
       id_secao: 3,
       secao: "Eletrônicos"
     }
+   
   ];
