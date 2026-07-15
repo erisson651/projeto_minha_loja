@@ -84,15 +84,27 @@ const carregaSecoes = () => {
 
     ul.innerHTML = "";
 
+    // Marca visualmente qual botão está ativo no momento
+    const marcarAtivo = (linkClicado) => {
+        ul.querySelectorAll(".lnk-secao").forEach((lnk) => {
+            lnk.classList.remove("ativo");
+        });
+        linkClicado.classList.add("ativo");
+    };
+
     // Botão Todos
     const liTodos = document.createElement("li");
 
     const aTodos = document.createElement("a");
     aTodos.href = "#";
     aTodos.textContent = "Todos";
+    // Antes faltava a classe "lnk-secao", por isso o botão
+    // "Todos" ficava sem nenhum estilo aplicado.
+    aTodos.classList.add("lnk-secao", "btn-todos", "ativo");
 
     aTodos.addEventListener("click", (e) => {
         e.preventDefault();
+        marcarAtivo(aTodos);
         listarProdutos(produtos);
     });
 
@@ -112,6 +124,8 @@ const carregaSecoes = () => {
         a.addEventListener("click", (e) => {
 
             e.preventDefault();
+
+            marcarAtivo(a);
 
             const filtrados = filtroProduto(secao.id_secao);
 

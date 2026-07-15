@@ -1,78 +1,117 @@
-<section id="carrinho">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-  <div class="container-carrinho">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APEX SPORT - Carrinho</title>
 
-      <h1>Meu Carrinho</h1>
+  <link rel="stylesheet" href="../css/style_estrutura.css">
+  <link rel="stylesheet" href="../css/style_carrinho.css">
+</head>
 
-      <table>
+<body>
+  <main id="geral">
+    <header id="cabecalho">
+      <div id="divlogo">
+        APEX SPORT
+      </div>
+
+      <nav id="menu">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="Apex_tv.html">Apex TV</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="carrinho.html"><img src="../imagens/ChatGPT Image 6 de jul. de 2026, 14_37_22.png" alt="Carrinho"></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="carrinho">
+
+      <div class="container-carrinho">
+
+        <h1>Meu Carrinho</h1>
+
+        <table>
           <thead>
-              <tr>
-                  <th>Produto</th>
-                  <th>Preço</th>
-                  <th>Quantidade</th>
-                  <th>Total</th>
-                  <th></th>
-              </tr>
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
           </thead>
 
           <tbody id="listaCarrinho">
           </tbody>
-      </table>
+        </table>
 
-      <p id="carrinhoVazio" class="carrinho-vazio" style="display:none;">
+        <p id="carrinhoVazio" class="carrinho-vazio" style="display:none;">
           Seu carrinho está vazio.
           <a href="../index.html">Voltar para a loja</a>
-          <link rel="stylesheet" href="../css/style_carrinho.css">
- 
-<script src="../script_loja.js"></script>
-      </p>
+        </p>
 
-      <!-- Cálculo do CEP -->
-      <div class="cep-box">
+        <!-- Cálculo do CEP -->
+        <div class="cep-box">
 
           <h3>Calcular Frete</h3>
 
           <div class="cep-form">
 
-              <label for="cep">CEP</label>
+            <label for="cep">CEP</label>
 
-              <input
-                  type="text"
-                  id="cep"
-                  placeholder="00000-000"
-                  maxlength="9">
+            <input
+              type="text"
+              id="cep"
+              placeholder="00000-000"
+              maxlength="9">
 
-              <button id="btnCep">
-                  Calcular
-              </button>
+            <button id="btnCep">
+              Calcular
+            </button>
 
           </div>
 
           <p id="resultadoCep"></p>
 
-      </div>
+        </div>
 
-      <!-- Resumo -->
-      <div class="resumo">
+        <!-- Resumo -->
+        <div class="resumo">
 
           <p>Subtotal:
-              <span id="subtotal">R$ 0,00</span>
+            <span id="subtotal">R$ 0,00</span>
           </p>
 
           <p>Frete:
-              <span id="frete">R$ 0,00</span>
+            <span id="frete">R$ 0,00</span>
           </p>
 
           <h2>Total:
-              <span id="total">R$ 0,00</span>
+            <span id="total">R$ 0,00</span>
           </h2>
 
           <button class="finalizar">
-              Finalizar Compra
+            Finalizar Compra
           </button>
+
+        </div>
 
       </div>
 
-  </div>
+    </section>
 
-</section>
+    <footer id="rodape">
+      <h2>&copy; 2026 Nexus Wear S.A. Todos os direitos reservados.</h2>
+      <p>Formas de pagamento: Pix, Cartões de Débito e Crédito</p>
+    </footer>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

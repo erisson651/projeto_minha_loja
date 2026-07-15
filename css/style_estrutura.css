@@ -164,27 +164,78 @@
 #menu-secoes{
     display:flex;
     flex-wrap:wrap;
-    gap:15px;
+    gap:12px;
     list-style:none;
     justify-content:center;
+    padding:6px;
 }
 
 #menu-secoes .lnk-secao{
-    display:inline-block;
-    padding:8px 20px;
+    display:inline-flex;
+    align-items:center;
+    padding:9px 22px;
     border:2px solid var(--cor01);
-    border-radius:20px;
+    border-radius:30px;
+    background:var(--cor02);
     color:var(--cor01);
     text-decoration:none;
     text-transform:uppercase;
     font-weight:bold;
-    font-size:.9em;
-    transition:.3s;
+    font-size:.85em;
+    letter-spacing:.5px;
+    cursor:pointer;
+    transition:background .25s, color .25s, transform .15s, box-shadow .25s;
 }
 
 #menu-secoes .lnk-secao:hover{
     background:var(--cor01);
     color:var(--cor02);
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(13,71,161,.25);
+}
+
+#menu-secoes .lnk-secao:active{
+    transform:translateY(0);
+}
+
+/* Botão "Todos": destaque como filtro padrão do catálogo */
+#menu-secoes .btn-todos{
+    border-color:var(--cor04);
+    background:var(--cor04);
+    color:var(--cor02);
+    box-shadow:0 4px 10px rgba(109,76,65,.3);
+}
+
+#menu-secoes .btn-todos:hover{
+    background:#5a3d33;
+    border-color:#5a3d33;
+    color:var(--cor02);
+    box-shadow:0 6px 14px rgba(109,76,65,.35);
+}
+
+/* Estado ativo: mostra qual categoria está sendo exibida */
+#menu-secoes .lnk-secao.ativo{
+    background:var(--cor01);
+    border-color:var(--cor01);
+    color:var(--cor02);
+    box-shadow:0 4px 10px rgba(13,71,161,.3);
+}
+
+#menu-secoes .btn-todos.ativo{
+    background:var(--cor04);
+    border-color:var(--cor04);
+    box-shadow:0 4px 10px rgba(109,76,65,.35);
+}
+
+@media(max-width:700px){
+    #menu-secoes{
+        gap:8px;
+    }
+
+    #menu-secoes .lnk-secao{
+        padding:8px 16px;
+        font-size:.8em;
+    }
 }
 
 /*=============================
