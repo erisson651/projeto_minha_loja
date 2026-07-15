@@ -1,33 +1,38 @@
-// script_loja.js
-// Fica na página inicial (index.html).
-// Quando o cliente clica em "Adicionar", pega os dados do produto
-// direto para o carrinho, já com esse produto na URL.
+// ==========================================
+// SCRIPT DA LOJA
+// Responsável por enviar o produto
+// selecionado para o carrinho.
+// ==========================================
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("click", function (e) {
 
-    const botoesAdicionar = document.querySelectorAll(".btn-add");
+    // Verifica se clicou em um botão "Adicionar"
+    if (!e.target.classList.contains("btn-add")) {
+        return;
+    }
 
-    botoesAdicionar.forEach(function (botao) {
+    // Localiza o card do produto
+    const card = e.target.closest(".card");
 
-        botao.addEventListener("click", function () {
+    // Pega os dados armazenados no card
+    const nome = card.dataset.nome;
+    const preco = card.dataset.preco;
+    const imagem = card.dataset.imagem;
 
-            const card = botao.closest(".card");
+    // Verifica se todos os dados existem
+    if (!nome || !preco || !imagem) {
+        alert("Erro ao adicionar o produto ao carrinho.");
+        return;
+    }
 
-            const nome = card.dataset.nome;
-            const preco = card.dataset.preco;
-            const imagem = card.dataset.imagem;
-
-            // Monta a URL do carrinho com os dados do produto
-            const params = new URLSearchParams({
-                nome: nome,
-                preco: preco,
-                imagem: imagem
-            });
-
-            window.location.href = "paginas/carrinho.html?" + params.toString();
-
-        });
-
+    // Cria os parâmetros da URL
+    const params = new URLSearchParams({
+        nome: nome,
+        preco: preco,
+        imagem: imagem
     });
+
+    // Redireciona para o carrinho
+    window.location.href = "paginas/carrinho.html?" + params.toString();
 
 });

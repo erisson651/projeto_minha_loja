@@ -108,6 +108,67 @@ tbody td{
 }
 
 /*=============================
+        CEP
+==============================*/
+
+.cep-box{
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.cep-box h3{
+    color: var(--cor01);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cep-form{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.cep-form input{
+    flex: 1;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    outline: none;
+}
+
+.cep-form input:focus{
+    border: 2px solid var(--cor01);
+}
+
+.cep-form button{
+    width: 140px;
+    height: 42px;
+    border: none;
+    border-radius: 6px;
+    background: var(--cor01);
+    color: var(--cor02);
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cep-form button:hover{
+    background: var(--cor04);
+}
+
+#resultadoCep{
+    margin-top: 15px;
+    color: var(--cor03);
+    font-size: .95em;
+}
+
+/*=============================
         RESUMO
 ==============================*/
 
@@ -124,6 +185,7 @@ tbody td{
 .resumo p{
     margin: 0;
     color: var(--cor03);
+    font-size: 1.05em;
 }
 
 .resumo h2{
@@ -163,7 +225,10 @@ tbody td{
         display: none;
     }
 
-    table, tbody, tr, td{
+    table,
+    tbody,
+    tr,
+    td{
         display: block;
         width: 100%;
     }
@@ -177,6 +242,15 @@ tbody td{
     tbody td{
         border-bottom: none;
         padding: 8px 0;
+    }
+
+    .cep-form{
+        flex-direction: column;
+    }
+
+    .cep-form input,
+    .cep-form button{
+        width: 100%;
     }
 
     .resumo{
