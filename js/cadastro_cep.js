@@ -4,14 +4,14 @@ cep.addEventListener("blur", buscarCep);
 
 function buscarCep() {
 
-    const valorCep = cep.value.replace(/\D/g, "");
+    const Numcep = cep.value.replace(/\D/g, "");
 
-    if (valorCep.length !== 8) {
+    if (Numcep.length !== 8) {
         alert("CEP inválido!");
         return;
     }
 
-    fetch(`https://viacep.com.br/ws/${valorCep}/json/`)
+    fetch(`https://viacep.com.br/ws/${Numcep}/json/`)
         .then(resposta => resposta.json())
         .then(dados => {
 
